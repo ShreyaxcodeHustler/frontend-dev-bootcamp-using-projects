@@ -7,4 +7,10 @@ textArea.addEventListener("input", function(){
     const length=textArea.value.length;
     counter.textContent = `${length}/100 characters`;
     //above code are enough for a basic textcounter project 
-})
+    if (length>100){
+        counter.style.color="red";
+    } else{
+        counter.style.color="black";
+    }
+    
+});
