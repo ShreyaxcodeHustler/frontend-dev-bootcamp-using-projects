@@ -27,3 +27,5 @@ calculateBtn.addEventListener('click', function() {
     result.textContent='Result:'+answer;
 
 });
+/*try  n / 0 in JS returns Infinity (and 0 / 0 returns NaN, "Not a Number") 
+most languages would throw an error here, but js allows this special case.*/
