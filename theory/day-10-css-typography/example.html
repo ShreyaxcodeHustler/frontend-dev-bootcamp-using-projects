@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Day 10 - Typography</title>
+  <style>
+    body {
+      font-family: Georgia, "Times New Roman", serif;
+      padding: 24px;
+      max-width: 600px;
+      line-height: 1.6;
+    }
+
+    h1 {
+      font-family: "Trebuchet MS", sans-serif;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+    }
+
+    .lead {
+      font-size: 1.25rem;
+      font-weight: 400;
+      color: #555;
+    }
+
+    .caps {
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      font-size: 0.85rem;
+      color: #888;
+    }
+
+    .justified {
+      text-align: justify;
+    }
+
+    .tight-line-height {
+      line-height: 1;
+      border: 1px dashed #ccc;
+      padding: 8px;
+    }
+
+    .loose-line-height {
+      line-height: 2;
+      border: 1px dashed #ccc;
+      padding: 8px;
+    }
+  </style>
+</head>
+<body>
+
+  <p class="caps">Chapter One</p>
+  <h1>The Anatomy of Type</h1>
+  <p class="lead">A short lead paragraph in a larger, lighter weight to draw the reader in.</p>
+
+  <p class="justified">
+    This paragraph uses text-align: justify, which stretches each line so both
+    the left and right edges align, similar to text in a printed newspaper column.
+    Line-height here is the body default of 1.6, chosen for comfortable reading.
+  </p>
+
+  <p class="tight-line-height">
+    This paragraph has line-height: 1, making lines feel cramped and harder to read
+    when there is more than one line of text.
+  </p>
+
+  <p class="loose-line-height">
+    This paragraph has line-height: 2, giving lines a lot of breathing room —
+    good for accessibility but can feel too airy for dense content.
+  </p>
+
+</body>
+</html>

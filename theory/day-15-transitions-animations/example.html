@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Day 15 - Transitions & Animations</title>
+  <style>
+    body { font-family: sans-serif; padding: 24px; }
+    section { margin-bottom: 40px; }
+
+    /* Transition demo */
+    .btn {
+      padding: 10px 20px;
+      background: steelblue;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background 0.3s ease, transform 0.2s ease;
+    }
+    .btn:hover {
+      background: darkslateblue;
+      transform: translateY(-3px);
+    }
+
+    /* Card flip-ish hover using transform */
+    .card {
+      width: 160px;
+      height: 100px;
+      background: #dff0d8;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+    }
+    .card:hover {
+      transform: rotate(-2deg) scale(1.05);
+      box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+    }
+
+    /* Keyframe animation: pulsing badge */
+    @keyframes pulse {
+      0%   { transform: scale(1); opacity: 1; }
+      50%  { transform: scale(1.15); opacity: 0.7; }
+      100% { transform: scale(1); opacity: 1; }
+    }
+    .badge {
+      display: inline-block;
+      width: 16px;
+      height: 16px;
+      background: crimson;
+      border-radius: 50%;
+      animation: pulse 1.5s ease-in-out infinite;
+    }
+
+    /* Keyframe animation: sliding entrance */
+    @keyframes slideIn {
+      from { transform: translateX(-40px); opacity: 0; }
+      to   { transform: translateX(0); opacity: 1; }
+    }
+    .slide-item {
+      background: #d9edf7;
+      padding: 12px;
+      margin-bottom: 8px;
+      animation: slideIn 0.6s ease-out both;
+    }
+    .slide-item:nth-child(2) { animation-delay: 0.15s; }
+    .slide-item:nth-child(3) { animation-delay: 0.3s; }
+
+    @media (prefers-reduced-motion: reduce) {
+      * { animation: none !important; transition: none !important; }
+    }
+  </style>
+</head>
+<body>
+
+  <section>
+    <h1>Transition on Hover</h1>
+    <button class="btn">Hover Me</button>
+  </section>
+
+  <section>
+    <h1>Transform Transition</h1>
+    <div class="card">Hover this card</div>
+  </section>
+
+  <section>
+    <h1>Looping Keyframe Animation</h1>
+    <p>Live status: <span class="badge"></span> Recording</p>
+  </section>
+
+  <section>
+    <h1>Staggered Entrance Animation</h1>
+    <div class="slide-item">Item 1</div>
+    <div class="slide-item">Item 2</div>
+    <div class="slide-item">Item 3</div>
+  </section>
+
+</body>
+</html>

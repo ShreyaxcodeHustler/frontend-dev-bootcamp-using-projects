@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Day 5 - Forms</title>
+  <style>
+    form { max-width: 400px; font-family: sans-serif; }
+    label { display: block; margin-top: 12px; font-weight: bold; }
+    input, select, textarea { width: 100%; padding: 6px; margin-top: 4px; box-sizing: border-box; }
+    fieldset { margin-top: 16px; }
+    button { margin-top: 16px; margin-right: 8px; padding: 8px 16px; }
+  </style>
+</head>
+<body>
+
+  <h1>Sign Up Form</h1>
+
+  <form action="/submit" method="POST">
+
+    <label for="name">Full Name</label>
+    <input type="text" id="name" name="name" required minlength="2">
+
+    <label for="email">Email</label>
+    <input type="email" id="email" name="email" required>
+
+    <label for="age">Age</label>
+    <input type="number" id="age" name="age" min="13" max="120">
+
+    <label for="bio">Short Bio</label>
+    <textarea id="bio" name="bio" rows="3"></textarea>
+
+    <label for="country">Country</label>
+    <select id="country" name="country">
+      <option value="ind">India</option>
+      <option value="usa">USA</option>
+      <option value="uk">UK</option>
+    </select>
+
+    <fieldset>
+      <legend>Contact Preferences</legend>
+      <label><input type="checkbox" name="pref" value="email_updates"> Email updates</label>
+      <label><input type="checkbox" name="pref" value="sms_updates"> SMS updates</label>
+    </fieldset>
+
+    <fieldset>
+      <legend>Preferred Plan</legend>
+      <label><input type="radio" name="plan" value="free" checked> Free</label>
+      <label><input type="radio" name="plan" value="pro"> Pro</label>
+    </fieldset>
+
+    <button type="submit">Sign Up</button>
+    <button type="reset">Clear</button>
+
+  </form>
+
+</body>
+</html>

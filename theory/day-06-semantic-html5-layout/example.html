@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Day 6 - Semantic Layout</title>
+  <style>
+    body { font-family: sans-serif; margin: 0; }
+    header, footer { background: #2c3e50; color: white; padding: 16px; }
+    nav ul { list-style: none; display: flex; gap: 16px; padding: 0; margin: 0; }
+    nav a { color: white; text-decoration: none; }
+    main { display: flex; gap: 24px; padding: 16px; }
+    section { flex: 3; }
+    aside { flex: 1; background: #f4f4f4; padding: 12px; }
+    article { border: 1px solid #ddd; padding: 12px; margin-bottom: 12px; }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>My Dev Blog</h1>
+    <nav>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Articles</a></li>
+        <li><a href="#">About</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section>
+      <h2>Latest Articles</h2>
+      <article>
+        <h3>Understanding Semantic HTML</h3>
+        <p>Why meaning-first markup matters for accessibility...</p>
+      </article>
+      <article>
+        <h3>CSS Grid vs Flexbox</h3>
+        <p>A practical guide to choosing the right layout tool...</p>
+      </article>
+    </section>
+
+    <aside>
+      <h2>About the Author</h2>
+      <p>A developer writing about frontend fundamentals.</p>
+    </aside>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 My Dev Blog. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Day 4 - Tables</title>
+  <style>
+    table { border-collapse: collapse; width: 100%; max-width: 500px; }
+    th, td { border: 1px solid #999; padding: 8px 12px; text-align: left; }
+    thead { background: #f0f0f0; }
+    tfoot { font-weight: bold; }
+  </style>
+</head>
+<body>
+
+  <h1>Student Scores</h1>
+
+  <table>
+    <caption>Term 1 Quiz Results</caption>
+    <thead>
+      <tr>
+        <th scope="col">Name</th>
+        <th scope="col">Quiz 1</th>
+        <th scope="col">Quiz 2</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">Asha</th>
+        <td>92</td>
+        <td>88</td>
+      </tr>
+      <tr>
+        <th scope="row">Ravi</th>
+        <td>75</td>
+        <td>81</td>
+      </tr>
+      <tr>
+        <th scope="row">Meera</th>
+        <td colspan="2">Absent for both quizzes</td>
+      </tr>
+    </tbody>
+    <tfoot>
+      <tr>
+        <td>Class Average</td>
+        <td>83.5</td>
+        <td>84.5</td>
+      </tr>
+    </tfoot>
+  </table>
+
+</body>
+</html>

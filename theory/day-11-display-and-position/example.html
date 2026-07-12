@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Day 11 - Display & Position</title>
+  <style>
+    body { font-family: sans-serif; padding: 24px; }
+
+    .inline-demo span { background: #dff0d8; margin: 2px; padding: 2px 6px; }
+    .inline-block-demo span {
+      display: inline-block;
+      width: 80px;
+      height: 40px;
+      background: #d9edf7;
+      margin: 4px;
+      text-align: center;
+      line-height: 40px;
+    }
+
+    .card {
+      position: relative;      /* positioning context for the badge */
+      width: 220px;
+      height: 120px;
+      background: #f4f4f4;
+      border: 1px solid #ccc;
+      margin: 24px 0;
+    }
+    .badge {
+      position: absolute;
+      top: 8px;
+      right: 8px;
+      background: crimson;
+      color: white;
+      font-size: 0.75rem;
+      padding: 2px 8px;
+      border-radius: 10px;
+    }
+
+    .sticky-header {
+      position: sticky;
+      top: 0;
+      background: #2c3e50;
+      color: white;
+      padding: 8px;
+    }
+
+    .scroll-box {
+      height: 150px;
+      overflow-y: auto;
+      border: 1px solid #ccc;
+    }
+    .scroll-box p { padding: 0 8px; }
+  </style>
+</head>
+<body>
+
+  <h1>Inline vs Inline-Block</h1>
+  <p class="inline-demo">
+    <span>one</span><span>two</span><span>three</span>
+    (width/height ignored on inline elements)
+  </p>
+  <p class="inline-block-demo">
+    <span>one</span><span>two</span><span>three</span>
+    (inline-block respects width/height)
+  </p>
+
+  <h1>Position: relative + absolute</h1>
+  <div class="card">
+    <p style="padding: 8px;">A card with a badge anchored to its top-right corner.</p>
+    <span class="badge">NEW</span>
+  </div>
+
+  <h1>Position: sticky</h1>
+  <div class="scroll-box">
+    <div class="sticky-header">I stick to the top while you scroll this box</div>
+    <p>Line 1</p><p>Line 2</p><p>Line 3</p><p>Line 4</p>
+    <p>Line 5</p><p>Line 6</p><p>Line 7</p><p>Line 8</p>
+  </div>
+
+</body>
+</html>

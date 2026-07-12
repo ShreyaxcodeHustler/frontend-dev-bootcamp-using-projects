@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Day 13 - CSS Grid</title>
+  <style>
+    body { font-family: sans-serif; padding: 24px; }
+    .demo-label { margin-top: 32px; }
+
+    .page-layout {
+      display: grid;
+      grid-template-columns: 150px 1fr;
+      grid-template-rows: auto 1fr auto;
+      grid-template-areas:
+        "sidebar header"
+        "sidebar main"
+        "sidebar footer";
+      gap: 8px;
+      min-height: 300px;
+    }
+    .page-layout > * { padding: 12px; }
+    .header  { grid-area: header;  background: #2c3e50; color: white; }
+    .sidebar { grid-area: sidebar; background: #34495e; color: white; }
+    .main    { grid-area: main;    background: #ecf0f1; }
+    .footer  { grid-area: footer;  background: #bdc3c7; }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+      gap: 10px;
+    }
+    .gallery div {
+      background: #d9edf7;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .span-demo {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 8px;
+    }
+    .span-demo div { background: #dff0d8; padding: 12px; text-align: center; }
+    .span-demo .wide { grid-column: span 2; background: #f2dede; }
+  </style>
+</head>
+<body>
+
+  <h1>Named Grid Areas (page layout)</h1>
+  <div class="page-layout">
+    <div class="header">Header</div>
+    <div class="sidebar">Sidebar</div>
+    <div class="main">Main content area</div>
+    <div class="footer">Footer</div>
+  </div>
+
+  <h1 class="demo-label">Responsive Auto-Fit Gallery (resize the window)</h1>
+  <div class="gallery">
+    <div>1</div><div>2</div><div>3</div><div>4</div><div>5</div><div>6</div>
+  </div>
+
+  <h1 class="demo-label">Column Span</h1>
+  <div class="span-demo">
+    <div>A</div>
+    <div class="wide">B (spans 2 columns)</div>
+    <div>C</div>
+    <div>D</div>
+  </div>
+
+</body>
+</html>

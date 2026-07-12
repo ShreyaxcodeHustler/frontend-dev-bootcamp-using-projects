@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Day 14 - Responsive Design</title>
+  <style>
+    body { font-family: sans-serif; padding: 16px; margin: 0; }
+
+    /* Mobile-first base styles: stacked column */
+    .layout {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .layout > div {
+      padding: 16px;
+      background: #d9edf7;
+    }
+
+    .fluid-heading {
+      font-size: clamp(1.25rem, 4vw + 0.5rem, 2.5rem);
+    }
+
+    /* Tablet and up: switch to a row layout */
+    @media (min-width: 600px) {
+      .layout {
+        flex-direction: row;
+      }
+    }
+
+    /* Desktop and up: constrain width and center */
+    @media (min-width: 1024px) {
+      .layout {
+        max-width: 900px;
+        margin: 0 auto;
+      }
+    }
+
+    .note {
+      font-size: 0.85rem;
+      color: #666;
+    }
+  </style>
+</head>
+<body>
+
+  <h1 class="fluid-heading">Resize your browser window</h1>
+  <p class="note">
+    Below 600px: stacked column. From 600px: row layout. From 1024px: centered with max-width.
+    The heading above uses <code>clamp()</code> to scale its font size fluidly with viewport width.
+  </p>
+
+  <div class="layout">
+    <div>Panel A</div>
+    <div>Panel B</div>
+    <div>Panel C</div>
+  </div>
+
+</body>
+</html>

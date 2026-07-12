@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Day 12 - Flexbox</title>
+  <style>
+    body { font-family: sans-serif; padding: 24px; }
+    .demo { border: 1px dashed #999; margin-bottom: 24px; padding: 8px; }
+
+    .navbar {
+      display: flex;
+      align-items: center;
+      background: #2c3e50;
+      color: white;
+      padding: 12px;
+    }
+    .navbar .push-right { margin-left: auto; display: flex; gap: 12px; }
+
+    .center-box {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 120px;
+      background: #f4f4f4;
+    }
+
+    .columns {
+      display: flex;
+      gap: 12px;
+    }
+    .columns > div {
+      flex: 1;
+      background: #d9edf7;
+      padding: 12px;
+      text-align: center;
+    }
+
+    .card-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+    .card-row .card {
+      flex: 1 1 150px;   /* grow, shrink, base width 150px -> wraps on small screens */
+      background: #dff0d8;
+      padding: 16px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Navbar (justify with margin-left: auto)</h1>
+  <div class="navbar">
+    <strong>MyLogo</strong>
+    <div class="push-right">
+      <span>Home</span><span>About</span><span>Contact</span>
+    </div>
+  </div>
+
+  <h1>Perfectly Centered Content</h1>
+  <div class="demo center-box">Centered both ways</div>
+
+  <h1>Equal-Width Columns (flex: 1)</h1>
+  <div class="demo columns">
+    <div>Column A</div>
+    <div>Column B</div>
+    <div>Column C</div>
+  </div>
+
+  <h1>Wrapping Card Row</h1>
+  <div class="demo card-row">
+    <div class="card">Card 1</div>
+    <div class="card">Card 2</div>
+    <div class="card">Card 3</div>
+    <div class="card">Card 4</div>
+  </div>
+
+</body>
+</html>

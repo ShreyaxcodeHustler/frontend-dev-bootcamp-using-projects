@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Day 3 - Links, Images & Media</title>
+</head>
+<body>
+
+  <h1>Links & Media Demo</h1>
+
+  <h2>Links</h2>
+  <p>
+    <a href="https://developer.mozilla.org" target="_blank" rel="noopener noreferrer">
+      MDN Web Docs
+    </a> (opens in a new tab)
+  </p>
+  <p><a href="#bottom">Jump to the bottom of this page</a></p>
+
+  <h2>Image with alt text</h2>
+  <figure>
+    <img
+      src="https://placehold.co/400x250?text=Sample+Image"
+      alt="Placeholder graphic reading 'Sample Image'"
+      width="400" height="250">
+    <figcaption>Fig 1. A placeholder image used for demo purposes.</figcaption>
+  </figure>
+
+  <h2>Audio</h2>
+  <p>(Native browser player, no source file bundled with this demo)</p>
+  <audio controls>
+    <source src="song.mp3" type="audio/mpeg">
+    Your browser doesn't support the audio tag.
+  </audio>
+
+  <h2 id="bottom">Video</h2>
+  <video controls width="320">
+    <source src="movie.mp4" type="video/mp4">
+    Your browser doesn't support the video tag.
+  </video>
+
+</body>
+</html>

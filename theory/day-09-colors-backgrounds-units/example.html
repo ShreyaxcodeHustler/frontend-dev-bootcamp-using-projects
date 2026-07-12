@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Day 9 - Colors, Backgrounds & Units</title>
+  <style>
+    body { font-family: sans-serif; padding: 24px; }
+
+    .swatch {
+      display: inline-block;
+      width: 100px;
+      height: 60px;
+      margin: 4px;
+      color: white;
+      font-size: 0.8rem;
+      text-align: center;
+      line-height: 60px;
+    }
+
+    .named   { background-color: tomato; }
+    .hex     { background-color: #2c3e50; }
+    .rgb     { background-color: rgb(46, 204, 113); }
+    .rgba    { background-color: rgba(52, 152, 219, 0.6); color: black; }
+    .hsl     { background-color: hsl(280, 60%, 50%); }
+
+    .gradient-bg {
+      height: 100px;
+      background: linear-gradient(90deg, #ff9a9e, #fad0c4);
+      margin-top: 16px;
+    }
+
+    .photo-bg {
+      height: 150px;
+      background: #333 url("https://placehold.co/600x150?text=Background+Image") center / cover no-repeat;
+      margin-top: 16px;
+      color: white;
+    }
+
+    .rem-text  { font-size: 1.5rem; }
+    .em-text   { font-size: 1.5em; }
+  </style>
+</head>
+<body>
+
+  <h1>Color Formats</h1>
+  <div class="swatch named">named</div>
+  <div class="swatch hex">hex</div>
+  <div class="swatch rgb">rgb()</div>
+  <div class="swatch rgba">rgba()</div>
+  <div class="swatch hsl">hsl()</div>
+
+  <h1>Backgrounds</h1>
+  <div class="gradient-bg"></div>
+  <div class="photo-bg"></div>
+
+  <h1>Units</h1>
+  <p class="rem-text">This text is sized with rem (relative to root font size).</p>
+  <p class="em-text">This text is sized with em (relative to its own parent's font size).</p>
+
+</body>
+</html>

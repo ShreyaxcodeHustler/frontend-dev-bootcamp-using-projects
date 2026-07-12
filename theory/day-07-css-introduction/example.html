@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Day 7 - CSS Introduction</title>
+  <style>
+    /* Internal stylesheet */
+    p {
+      color: navy;
+      font-family: sans-serif;
+    }
+
+    .highlight {
+      background: yellow;
+    }
+
+    #special {
+      color: darkred;
+      font-weight: bold;
+    }
+
+    div > p {
+      border-left: 4px solid teal;
+      padding-left: 8px;
+    }
+
+    a:hover {
+      color: orange;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>CSS Selectors Demo</h1>
+
+  <p>A plain paragraph styled by the element selector <code>p</code>.</p>
+
+  <p class="highlight">This paragraph has a class selector applying a yellow background.</p>
+
+  <p id="special">This paragraph has an ID selector making it bold and dark red.</p>
+
+  <div>
+    <p>This paragraph is a direct child of a &lt;div&gt;, styled by <code>div &gt; p</code>.</p>
+  </div>
+
+  <p><a href="#">Hover over this link to see the :hover pseudo-class in action.</a></p>
+
+</body>
+</html>
